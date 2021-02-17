@@ -1,0 +1,15 @@
+@model List<User>;
+@{
+    ViewData["title"] = "Users";
+}
+<div class="container">
+  <h1>Here are some users.</h1>
+  <ul>
+    @{
+      foreach (User user in Model)
+      {
+          <li>@user.first_name @user.last_name</li>
+      }
+    }
+  </ul>
+</div>
